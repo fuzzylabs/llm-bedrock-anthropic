@@ -602,6 +602,7 @@ class BedrockClaude(llm.Model):
         # Preserve the Bedrock-specific user content dict, so it can be re-used in
         # future conversations.
         response.response_json = {
+            'id': response.id,
             'bedrock_user_content': self.encode_bytes(prompt_content)
         }
 
