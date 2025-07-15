@@ -631,6 +631,8 @@ class BedrockClaude(llm.Model):
 
         client = boto3.client('bedrock-runtime')
         if stream:
+            raise NotImplementedError("Streaming is broken with tool use. To be fixed.")
+
             bedrock_response = client.converse_stream(**params)
             response.response_json |= bedrock_response
             events = []
