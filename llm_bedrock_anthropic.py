@@ -123,7 +123,7 @@ def register_models(register):
         ),
     )
     register(
-        BedrockClaude("us.anthropic.claude-3-7-sonnet-20250219-v1:0", supports_attachments=True, supports_tools=True),
+        BedrockClaude("anthropic.claude-3-7-sonnet-20250219-v1:0", supports_attachments=True, supports_tools=True),
         aliases=(
             "bedrock-claude-v3.7-sonnet",
             "bedrock-claude-sonnet-v3.7",
